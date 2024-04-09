@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "731156083956",
+    "project_id": "gpttranslate-bd188",
+    "storage_bucket": "gpttranslate-bd188.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731156083956:android:41a2b1afb494c725aedaa1",
+        "android_client_info": {
+          "package_name": "com.example.voiceai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlObRbdE2uGjHH2bMzraWJoFzYckmlhA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
