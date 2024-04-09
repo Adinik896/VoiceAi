@@ -5,26 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background">
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="334dp"
+        android:layout_width="match_parent"
         android:layout_height="69dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="16dp"
+        android:layout_margin="16dp"
         android:ems="10"
-        android:hint="Input here ..."
+        android:hint="Input here"
+        android:textAlignment="center"
         android:inputType="text"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_edittext_background"
+        android:textColorHint="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
+
     <LinearLayout
+        android:background="@drawable/rounded_background"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:layout_height="500dp"
+        android:padding="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:layout_below="@id/editText"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
@@ -36,10 +44,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView"
@@ -47,8 +51,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
                     android:text="" />
-            </LinearLayout>
 
         </ScrollView>
 
@@ -70,8 +75,8 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:onClick="buttonAssist"
-            android:src="@drawable/microphone"
-            android:background="@drawable/button_background" />
+            android:src="@drawable/micro"
+            android:background="@drawable/rounded_background1" />
 
         <Space
             android:layout_width="0dp"
@@ -83,11 +88,12 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:onClick="openGallery"
-            android:background="@drawable/button_background"
-            android:src="@drawable/camera_vector" /> <!-- Set camera logo as source -->
+            android:background="@drawable/rounded_background1"
+            android:src="@drawable/gallery" /> <!-- Set camera logo as source -->
 
 
     </LinearLayout>
+
 
 
 </RelativeLayout>

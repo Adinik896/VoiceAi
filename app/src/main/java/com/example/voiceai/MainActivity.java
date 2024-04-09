@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         editText.setText(string);
                         String stringText = requestSolution(string + " In maximum 3 sentences");
-                        stringText = stringText.replaceAll("[^a-zA-Z0-9\\s]", "");
+                        stringText = stringText.replaceAll("[^a-zA-Z0-9\\s\\,\\.]", "");
                         stringOutput += stringText;
                         textView.setText(stringOutput);
                         textToSpeech.speak(stringOutput, TextToSpeech.QUEUE_FLUSH, null,null);
@@ -380,10 +380,17 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         stringOutput = "";
+        editText.setText("");
         speechRecognizer.startListening(intent);
     }
 
     public void openGallery(View view){
+        if (textToSpeech.isSpeaking()){
+            textToSpeech.stop();
+            return;
+        }
+        editText.setText("");
+        stringOutput = "";
         Intent iGallery = new Intent(Intent.ACTION_PICK);
         iGallery.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         startActivityForResult(iGallery, GALLERY_REQ_CODE);
@@ -398,7 +405,7 @@ public class MainActivity extends AppCompatActivity {
             Uri imageUri = data.getData();
             String text = getText(imageUri);//*$$\\
             String reply = requestSolution(text+" describe this in maximum 3 sentences");
-            reply.replaceAll("[^a-zA-Z0-9\\s]","");
+            reply.replaceAll("[^a-zA-Z0-9\\s\\,\\.]","");
             textToSpeech.speak(reply, TextToSpeech.QUEUE_FLUSH, null,null);
             textView.setText(reply);
 
