@@ -65,4 +65,3 @@ This app is powered by OpenAI's GPT-3.5 Turbo.
 ---
 
 Enjoy using your Android Voice Assistant! If you have any issues or feature requests, please feel free to create an issue in this repository.
-# Assistant
